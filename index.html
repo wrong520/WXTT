@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>请在浏览器打开</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background: #f6f6f6;
+      }
+      .wxtip {
+        height: 800px;
+        background-image: url(tt.jpg);
+        background-size: 100% 824px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wxtip" id="JweixinTip"></div>
+    <script>
+      window.onload = function () {
+        isWeixinBrowser();
+      };
+      function isWeixinBrowser() {
+        var ua = navigator.userAgent.toLowerCase();
+        var result = /micromessenger/.test(ua) ? true : false;
+        if (result) {
+          window.event ? (window.event.returnValue = false) : e.preventDefault();
+          document.getElementById("JweixinTip").style.display = "block";
+        } else {
+          var t = document.getElementById("JweixinTip");
+          t.style.display = "none";
+                                //修改链接在这里
+                                //修改链接在这里
+                                //修改链接在这里          
+          window.location.href = "http://www.xiyuhh678.cn/ewmdy/";
+                                //修改链接在这里
+                                //修改链接在这里
+                                //修改链接在这里
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>
